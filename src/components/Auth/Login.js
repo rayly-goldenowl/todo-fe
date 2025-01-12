@@ -1,9 +1,9 @@
-import Form from './Form';
+import FormLogin from './FormLogin';
 const Login = (props) => {
   return (
     <div className="flex w-full h-screen">
       <div className="w-full flex items-center justify-center lg:w-1/2">
-        <Form />
+        <FormLogin />
       </div>
 
       <div className="w-1/2 hidden lg:flex h-full bg-gray-100 items-center justify-center">

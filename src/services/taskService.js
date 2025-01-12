@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const token = localStorage.getItem('access_token');
-console.log('Token:', token);
 const headers = {
   Authorization: `Bearer ${token}`,
   Accept: 'application/json',
@@ -15,6 +14,7 @@ const createTaskk = (data) => {
 };
 
 const getAllTask = () => {
+  console.log(localStorage.getItem('access_token'));
   return axios
     .get('http://127.0.0.1:3000/api/todos/todos', {
       headers: {
@@ -24,11 +24,9 @@ const getAllTask = () => {
       },
     })
     .then((response) => {
-      console.log('Response:', response.data); // Log the response to see what is being returned
       return response.data;
     })
     .catch((error) => {
-      console.error('Error:', error); // Log any errors
       throw error;
     });
 };

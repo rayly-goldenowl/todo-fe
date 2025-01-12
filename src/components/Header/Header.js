@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import Logout from '../Auth/Logout';
 const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -22,7 +23,9 @@ const Header = () => {
                   Login
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
+              <NavDropdown.Item >
+                <Logout />
+              </NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
           </Nav>
